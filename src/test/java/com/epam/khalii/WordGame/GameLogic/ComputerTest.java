@@ -4,16 +4,16 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 
-/**
- * Created by Skopa on 17.05.2015.
- */
 public class ComputerTest {
 
     @Before
     public void setUp() throws Exception {
-
+        Player.cities = new ArrayList<String>();
+        Player.cities.add("Elend");
     }
 
     @After
@@ -23,6 +23,7 @@ public class ComputerTest {
 
     @Test
     public void testMove() throws Exception {
-
+        Computer c = new Computer("Computer");
+        assertEquals(c.move('e'), 'd');
     }
 }

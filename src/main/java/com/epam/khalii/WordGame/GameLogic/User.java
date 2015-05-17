@@ -4,9 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/**
- * Created by Skopa on 17.05.2015.
- */
 public class User extends Player {
     public User(String name) {
         super(name);
@@ -17,6 +14,7 @@ public class User extends Player {
         try {
             BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
             String city = in.readLine();
+            in.close();
             if(Player.cities.contains(city)){
                 Player.cities.remove(city);
                 return city.charAt(city.length()-1);

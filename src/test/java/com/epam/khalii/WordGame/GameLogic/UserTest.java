@@ -4,16 +4,15 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 
-/**
- * Created by Skopa on 17.05.2015.
- */
 public class UserTest {
 
     @Before
     public void setUp() throws Exception {
-
+        Player.cities = new ArrayList<String>();
     }
 
     @After
@@ -23,6 +22,7 @@ public class UserTest {
 
     @Test
     public void testMove() throws Exception {
-        
+        User user = new User("User");
+        assertEquals('0', user.move('a'));
     }
 }
