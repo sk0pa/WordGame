@@ -20,7 +20,9 @@ public class Computer extends Player {
             String city = subList.get(word);
             System.out.println(city);
             Player.cities.remove(city);
-            return city.charAt(city.length()-1);
+            if(Character.isLetter(city.charAt(city.length()-1)))
+                return city.charAt(city.length()-1);
+            return city.charAt(city.length()-2);
         }
         return '0';
     }

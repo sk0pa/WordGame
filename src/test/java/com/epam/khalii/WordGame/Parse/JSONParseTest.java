@@ -27,6 +27,6 @@ public class JSONParseTest {
     public void testGetAll() throws Exception {
         JSONParse jsonParse = new JSONParse();
         ArrayList<String> list = jsonParse.getAll();
-        assertTrue(list.contains("Shensha"));
+        assertTrue(list.contains("matanzas"));
     }
 }

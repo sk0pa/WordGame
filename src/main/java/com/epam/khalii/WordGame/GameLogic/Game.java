@@ -1,13 +1,14 @@
 package com.epam.khalii.WordGame.GameLogic;
 
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 /**
  * Created by Skopa on 17.05.2015.
  */
 public class Game {
     static char last = 'a';
-
+    private static final Logger gameLog = Logger.getLogger(Game.class.getName());
     public void start(ArrayList<Player> players){
         System.out.println("Start game with A letter. Go!");
         int playersNumber = players.size();
@@ -22,5 +23,6 @@ public class Game {
             }
         }
         System.out.println("Player "+players.get(0).getName()+" WIN!!!");
+        gameLog.info("Game over");
     }
 }

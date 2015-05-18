@@ -28,6 +28,6 @@ public class SQLParseTest {
     public void testGetAll() throws Exception {
         SQLParse sqlParse = new SQLParse();
         ArrayList<String> list = sqlParse.getAll();
-        assertTrue(list.contains("Wiggins"));
+        assertTrue(list.contains("Akron"));
     }
 }

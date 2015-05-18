@@ -17,7 +17,9 @@ public class User extends Player {
             in.close();
             if(Player.cities.contains(city)){
                 Player.cities.remove(city);
-                return city.charAt(city.length()-1);
+                if(Character.isLetter(city.charAt(city.length()-1)))
+                    return city.charAt(city.length()-1);
+                return city.charAt(city.length()-2);
             } else{
                 return '0';
             }
