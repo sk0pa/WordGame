@@ -11,7 +11,7 @@ import org.json.simple.parser.ParseException;
 /**
  * Created by Skopa on 16.05.2015.
  */
-public class JSONParse extends AbstractDAO {
+public class JSONParse extends AbstractParse {
     @Override
     public ArrayList<String> getAll() {
         ArrayList<String> cities = new ArrayList<String>();

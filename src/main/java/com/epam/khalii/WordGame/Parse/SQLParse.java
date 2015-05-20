@@ -11,10 +11,10 @@ import java.util.ArrayList;
 /**
  * Created by Skopa on 16.05.2015.
  */
-public class SQLParse {
+public class SQLParse extends AbstractParse {
     public static final String SQL_GET_ALL_CITIES = "select city_name from cities";
 
-    public ArrayList<String> getAll() throws SQLException {
+    public ArrayList<String> getAll() {
         ArrayList<String> cities = new ArrayList<String>();
         Connection cn = null;
         Statement st = null;
@@ -40,7 +40,6 @@ class DBConnector {
         String url = "jdbc:mysql://localhost/wordgame";
         String name = "root";
         String password = "";
-        Connection cn = DriverManager.getConnection(url, name, password);
-        return cn;
+        return DriverManager.getConnection(url, name, password);
     }
 }

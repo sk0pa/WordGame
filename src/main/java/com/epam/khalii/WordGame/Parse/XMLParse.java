@@ -11,7 +11,7 @@ import org.jdom2.input.SAXBuilder;
 /**
  * Created by Skopa on 16.05.2015.
  */
-public class XMLParse extends AbstractDAO {
+public class XMLParse extends AbstractParse {
     @Override
     public ArrayList<String> getAll(){
         try{

@@ -5,17 +5,17 @@ package com.epam.khalii.WordGame.GameLogic;
  */
 
 import org.jmock.Mockery;
-import org.jmock.integration.junit4.JMock;
 import org.jmock.integration.junit4.JUnit4Mockery;
 import org.jmock.Expectations;
 import org.junit.Test;
 
 public class MockTest {
+    final char LAST = 'a';
+
     @Test
     public void testMove() throws Exception {
-        final char LAST = 'a';
         Mockery context = new JUnit4Mockery();
-        final Players fake_player = context.mock(Players.class);
+        final Movable fake_player = context.mock(Movable.class);
         context.checking(new Expectations() {{ oneOf(fake_player).move(LAST); }});
         char ch = fake_player.move(LAST);
         context.assertIsSatisfied();

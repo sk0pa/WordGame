@@ -5,9 +5,10 @@ import java.util.ArrayList;
 /**
  * Created by Skopa on 16.05.2015.
  */
-public abstract class Player {
+public abstract class Player implements Movable {
     public static ArrayList<String> cities;
     private String name;
+
     public abstract char move(char last);
 
     public Player(String name) {

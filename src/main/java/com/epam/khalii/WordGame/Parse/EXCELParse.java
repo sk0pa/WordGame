@@ -16,7 +16,7 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 /**
  * Created by Skopa on 16.05.2015.
  */
-public class EXCELParse extends AbstractDAO {
+public class EXCELParse extends AbstractParse {
     public ArrayList<String> getAll(){
         ArrayList<String> towns = new ArrayList<String>();
         Excel excel = new Excel("src/cities.xls");

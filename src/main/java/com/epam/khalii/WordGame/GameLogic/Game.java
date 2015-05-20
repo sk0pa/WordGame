@@ -6,9 +6,10 @@ import java.util.logging.Logger;
 /**
  * Created by Skopa on 17.05.2015.
  */
-public class Game {
+public class Game implements Playable {
     static char last = 'a';
     private static final Logger gameLog = Logger.getLogger(Game.class.getName());
+
     public void start(ArrayList<Player> players){
         System.out.println("Start game with A letter. Go!");
         int playersNumber = players.size();

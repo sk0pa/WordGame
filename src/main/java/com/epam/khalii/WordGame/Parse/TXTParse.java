@@ -8,7 +8,7 @@ import java.util.ArrayList;
 /**
  * Created by Skopa on 16.05.2015.
  */
-public class TXTParse extends AbstractDAO{
+public class TXTParse extends AbstractParse {
     @Override
     public ArrayList<String> getAll() {
         try {
